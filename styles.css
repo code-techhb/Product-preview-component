@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* FIX THIS LATER: card size, add responsiveness */
+
+:root {
+  /* primary colors */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  /* Neutral */
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  /* font */
+  --p-font-size: 1.4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--cream);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* header */
+.header {
+  background-color: var(--dark-cyan);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--cream);
+  width: 100%;
+}
+
+/* main */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.product-card {
+  display: flex;
+  background-color: var(--white);
+  border-radius: 16px;
+  max-width: 70rem;
+}
+
+img {
+  width: 100%;
+  margin-right: 2rem;
+  border-radius: 16px 0 0 16px;
+}
+
+.description-box {
+  padding: 2rem;
+  justify-content: center;
+}
+
+.description-box p:first-of-type {
+  color: var(--dark-grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-family: "Fraunces", serif;
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+
+.description-box p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--dark-grayish-blue);
+  margin-bottom: 2rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.price span:first-of-type {
+  color: var(--dark-cyan);
+  font-size: 4rem;
+  font-family: "Fraunces", serif;
+}
+
+.price span:last-of-type {
+  text-decoration: line-through;
+}
+
+button {
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  font-size: 2rem;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 4rem;
+  align-self: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--very-dark-blue);
+}
+
+/* footer */
+footer.attribution {
+  font-size: 1.5rem;
+  color: var(--very-dark-blue);
+  place-self: center;
+}
+
+footer.attribution a {
+  color: var(--dark-grayish-blue);
+  text-decoration: none;
+}
+
+footer.attribution a:hover {
+  text-decoration: underline;
+  color: var(--dark-cyan);
+}
