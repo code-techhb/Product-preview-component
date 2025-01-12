@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* FIX THIS LATER: card size, add responsiveness */
-
 :root {
   /* primary colors */
   --dark-cyan: hsl(158, 36%, 37%);
@@ -60,6 +58,10 @@ main {
   max-width: 70rem;
 }
 
+.image-box {
+  min-width: 50%;
+}
+
 img {
   width: 100%;
   margin-right: 2rem;
@@ -68,6 +70,8 @@ img {
 
 .description-box {
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -80,7 +84,7 @@ img {
 h2 {
   font-family: "Fraunces", serif;
   font-size: 4rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .description-box p {
@@ -137,4 +141,109 @@ footer.attribution a {
 footer.attribution a:hover {
   text-decoration: underline;
   color: var(--dark-cyan);
+}
+
+/* Queries */
+@media screen and (max-width: 690px) {
+  .product-card {
+    max-width: 60rem;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .description-box {
+    padding: 2rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+    margin: 1.6rem 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    padding: 1.6rem;
+  }
+
+  .product-card {
+    flex-direction: column;
+    max-width: 34.3rem;
+  }
+
+  .image-box {
+    width: 100%;
+  }
+
+  img {
+    border-radius: 16px 16px 0 0;
+    margin-right: 0;
+  }
+
+  .description-box {
+    padding: 2.4rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+    margin: 1.2rem 0;
+  }
+
+  .description-box p {
+    font-size: 1.4rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .price {
+    gap: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .price span:first-of-type {
+    font-size: 3.2rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.6rem;
+  }
+
+  .header {
+    padding: 1.2rem;
+  }
+
+  footer.attribution {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    padding: 1.2rem;
+  }
+
+  .description-box {
+    padding: 2rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  .price span:first-of-type {
+    font-size: 2.8rem;
+  }
+
+  button {
+    padding: 1.2rem;
+  }
 }
